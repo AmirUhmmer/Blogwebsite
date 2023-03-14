@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write Stuff</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="font-sans font-bold min-h-screen">
+    <header class="border-gray-300 border-b h-20 flex justify-between px-4 font-sans font-bold">
+        <div class="font-mono md:text-2xl text-sm flex items-center">
+            <a href="index.html">
+                <span class="ml-5 md:ml-56 hover:cursor-pointer decoration-light_blue hover:text-pink_red hover:underline">
+                Write <span class="text-pink_red underline decoration-light_blue hover:text-black hover:no-underline">Stuff</span>
+                </span>
+            </a>     
+        </div>
+        <div class="font-mono md:text-2xl text-sm flex items-center">
+            <a href="post.html" class="mr-8 hover:cursor-pointer hover:text-pink_red hover:underline decoration-light_blue">Browse</a>
+            <a id="userHeader" class="md:mr-72 hover:cursor-pointer hover:text-pink_red hover:underline decoration-light_blue"></a>
+        </div>
+    </header>
+    
+    <div class="mt-7 ml-5 md:ml-96 font-extrabold md:text-xl">
+        <span class="">POSTS</span>
+    </div>
+
+    <div id="postSnippets">  
+    </div>
+
+    <img src="dp/up-arrows.png" onclick="scrollToTop()" class="fixed bottom-5 right-5 px-4 py-2 w-20 md:w-24 hover:cursor-pointer hover:animate-bounce">
+
+    <footer class="pt-14 md:pt-20 ">
+        <div class="bg-slate-300 w-full pb-0 h-36 mx-auto flex justify-center">
+            <div class="flex-col pt-7">
+                <div class="flex items-center">
+                    <img src="dp/facebook.png" class="h-10 pr-8 hover:cursor-pointer">
+                    <img src="dp/reddit.png" class="h-10 pr-8 hover:cursor-pointer">
+                    <img src="dp/instagram.png" class="h-10 pr-8 hover:cursor-pointer">
+                    <img src="dp/twitter.png" class="h-10 pr-8 hover:cursor-pointer">
+                </div>
+                <div class="pt-4 -ml-5">
+                    <a href="" class="text-xl pr-3 hover:cursor-pointer hover:text-pink_red hover:underline decoration-light_blue">Home</a><span>|</span>
+                    <a href="post.html" class="text-xl pr-3 pl-3 hover:cursor-pointer hover:text-pink_red hover:underline decoration-light_blue">Stories</a><span>|</span>
+                    <a onclick="scrollToTop()" class="text-xl pr-3 pl-3 hover:cursor-pointer hover:text-pink_red hover:underline decoration-light_blue">Back to Top</a>
+                </div>
+                <div class="pt-3 -ml-3">
+                    <span>©2023 Write Stuff | All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/ajax.js"></script>
+
+    <script type="text/javascript" src="js/postSnipsPage.js"></script>
+    <script type="text/javascript" src="js/userHeader.js"></script>
+    <script>posts();</script>
+    <script>userHeader();</script>
+</body>
+</html>

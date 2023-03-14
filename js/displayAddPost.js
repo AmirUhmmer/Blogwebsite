@@ -1,0 +1,3 @@
+function displayAddPost(){
+    $('#addPostInput').show()
+}
