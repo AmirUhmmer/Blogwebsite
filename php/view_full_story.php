@@ -14,18 +14,18 @@ class view_full extends db_connect {
         if($res && mysqli_num_rows($res) > 0) {
 			$res_data = mysqli_fetch_assoc($res);
             echo '<div class="mx-auto text-center">
-                    <span class="font-extrabold text-3xl text-red">'.$res_data["title"].'</span>
+                    <span class="font-extrabold text-3xl text-red dark:text-white">'.$res_data["title"].'</span>
                   </div>
-                  <div class="mt-7 w-full">
+                  <div class="mt-7 w-full dark:text-whish">
                     <span>Author:</span>
                     <span>'.$res_data["username"].'</span>
                   </div>
-                  <div class="mt-4 w-full">
+                  <div class="mt-4 w-full dark:text-whish">
                   <span>Date posted:</span>
                   <span>'.$res_data["date_posted"].'</span>
                   </div>
                   <img src="'.$res_data["picture"].'" class="mx-auto rounded-xl mt-5 w-11/12 md:w-[600px]">
-                  <div class="mt-7">
+                  <div class="mt-7 dark:text-card_white"">
                     <p>'.$res_data["content"].'</p>
                   </div>';
 		}
@@ -34,6 +34,7 @@ class view_full extends db_connect {
         }
     }
 }
+
 if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
     $post_id = $_GET['postId'];

@@ -11,29 +11,31 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
-<body class="font-sans font-bold min-h-screen overflow-auto">
+<body class="font-sans font-bold min-h-screen overflow-auto dark:bg-verydark_red dark:text-white">
     <header class="border-gray-300 border-b h-20 flex justify-between px-4 font-sans font-bold">
         <div class="font-mono md:text-2xl text-sm flex items-center">
             <a href="index.html">
                 <span class="ml-5 md:ml-56 hover:cursor-pointer decoration-light_blue hover:text-pink_red hover:underline">
-                Write <span class="text-pink_red underline decoration-light_blue hover:text-black hover:no-underline">Stuff</span>
+                    Write <span class="text-pink_red underline decoration-light_blue hover:text-black dark:hover:text-white hover:no-underline">Stuff</span>
                 </span>
             </a>     
         </div>
         <div class="font-mono md:text-2xl text-sm flex items-center">
-            <a href="post.html" class="mr-8 hover:cursor-pointer hover:text-pink_red hover:underline decoration-light_blue">Browse</a>
-            <a id="userHeader" class="md:mr-72 hover:cursor-pointer hover:text-pink_red hover:underline decoration-light_blue"></a>
+            <a href="post.html" class="absolute left-[240px] md:left-[1400px] hover:cursor-pointer hover:text-pink_red hover:underline decoration-light_blue">Browse</a>
+            <a id="userHeader" class="absolute left-[320px] md:left-[1550px] hover:cursor-pointer hover:text-pink_red hover:underline decoration-light_blue"></a>
+            <img src="illus/moon.png" onclick="toggleDark()" class="toggle-dark absolute left-[370px] md:left-[1850px] pl-3 md:pl-0 h-5 md:h-10 hover:cursor-pointer">
+            <img src="illus/sun.png" id="sun" onclick="toggleDark()" class="toggle-dark absolute left-[370px] md:left-[1850px] pl-3 md:pl-0 h-5 md:h-10 hover:cursor-pointer">
         </div>
     </header>
 
-    <div id="postFull" class="mx-auto mt-4 h-fit w-11/12 md:w-[1160px] flex-col items-center shadow-black shadow-lg rounded-lg p-8 text-black bg-white">
+    <div id="postFull" class="mx-auto mt-4 h-fit w-11/12 md:w-[1160px] flex-col items-center shadow-black shadow-lg rounded-lg p-8 text-black bg-white dark:bg-dark_red">
         
     </div>
 
     <img src="dp/up-arrows.png" onclick="scrollToTop()" class="fixed bottom-5 right-5 px-4 py-2 w-20 md:w-24 hover:cursor-pointer hover:animate-bounce scroll-smooth">
 
-    <footer class="pt-14 md:pt-20">
-        <div class="bg-slate-300 w-full pb-0 h-36 mx-auto flex justify-center">
+    <footer class="pt-14 md:pt-20 ">
+        <div class="bg-slate-300 dark:bg-dark_red w-full pb-0 h-36 mx-auto flex justify-center">
             <div class="flex-col pt-7">
                 <div class="flex items-center">
                     <img src="dp/facebook.png" class="h-10 pr-8 hover:cursor-pointer">
@@ -46,7 +48,7 @@
                     <a href="post.html" class="text-xl pr-3 pl-3 hover:cursor-pointer hover:text-pink_red hover:underline decoration-light_blue">Stories</a><span>|</span>
                     <a onclick="scrollToTop()" class="text-xl pr-3 pl-3 hover:cursor-pointer scro hover:text-pink_red hover:underline decoration-light_blue">Back to Top</a>
                 </div>
-                <div class="pt-3 -ml-3">
+                <div class="pt-2 -ml-3">
                     <span>©2023 Write Stuff | All rights reserved.</span>
                 </div>
             </div>

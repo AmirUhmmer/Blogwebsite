@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./*.html'],
+      content: ['./*.html'],
+      darkMode: 'class',
       theme: {
           screens: {
             sm: '300px',
@@ -20,6 +21,7 @@ module.exports = {
                     pink_red: '#AD2831',
                     light_blue: '#80FFDB',
                     whish: '#F1FAEE',
+                    card_white: '#f6f6f6',
                 },
             },
         },

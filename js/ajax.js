@@ -35,3 +35,35 @@ function scrollToTop() {
         behavior: "smooth"
     });
     }
+
+function toggleDark(){
+    
+    // const darkToggle = document.querySelector('.toggle-dark');
+    // document.documentElement.classList.toggle('dark');
+
+    const htmlElement = document.documentElement;
+  htmlElement.classList.toggle('dark');
+
+  if (htmlElement.classList.contains('dark')) {
+    localStorage.setItem('darkMode', 'on');
+    $('#moon').hide();
+    $('#sun').show();
+  } else {
+    localStorage.setItem('darkMode', 'off');
+    $('#moon').show();
+    $('#sun').hide();
+  }
+
+}
+
+window.addEventListener('load', function () {
+    const htmlElement = document.documentElement;
+    const darkMode = localStorage.getItem('darkMode');
+    if (darkMode === 'on') {
+      htmlElement.classList.add('dark');
+      $('#moon').hide();
+      $('#sun').show();
+    }
+
+  });
+
